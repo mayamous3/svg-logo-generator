@@ -25,6 +25,7 @@ Repo Link: https://github.com/mayamous3/svg-logo-generator
     Shape: Circle
     Text Color: Orchid
 ## Video Demonstration
+![](./assets/demo-logo-creator.gif)
 
 ## User Story
 ```md
