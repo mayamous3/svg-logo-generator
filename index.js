@@ -33,3 +33,29 @@ async function promptLogo() {
     ]
     )
 }
+
+//Function to add Shape to the logo
+function makeShape (shape){
+    // if shape entered by user is a circle then return a circle.
+    if (shape === 'Circle') {
+        return new Circle();
+    }
+    // else if entry is a square, return a square shape.
+    else if (shape === 'Square') {
+        return new Square();
+    }
+    // else if entry is a triangle, return a triangle shape.
+    else if (shape === 'Triangle') {
+        return new Triangle();
+    }
+}
+
+//Function to put together the logo (calls shape function and then adds the color and text)
+async function run(){
+    try{
+
+    }
+}
+
+// Call the function to assemble to assemble the logo
+run();
