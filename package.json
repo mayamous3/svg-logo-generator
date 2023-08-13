@@ -1,0 +1,33 @@
+{
+  "name": "svg-logo-generator",
+  "version": "1.0.0",
+  "description": "logo generator",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "lue\");"
+  },
+  "keywords": [
+    "ints=\"150",
+    "18",
+    "244",
+    "182",
+    "56",
+    "182\"",
+    "fill=\"blue\"",
+    "/>');"
+  ],
+  "author": "Amanda Cooper-Ponte",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^27.3.1"
+  }
+}
