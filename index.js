@@ -18,9 +18,29 @@ async function promptLogo() {
             message: 'Please provide characters for the logo'
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'color',
-            message: 'Please provide color choice for the logo'
+            message: 'Please provide color choice for the logo',
+            choices: [
+                'aqua',
+                'blue',
+                'coral',
+                'crimson',
+                'green',
+                'indigo',
+                'lavender',
+                'magenta',
+                'navy',
+                'olive',
+                'orchid',
+                'plum',
+                'purple',
+                'red',
+                'salmon',
+                'seagreen',
+                'teal',
+                'yellow'
+            ]
         },
         {
             // Using list type enquirer prompt to limit choices
@@ -53,9 +73,21 @@ function makeShape (shape){
 //Function to put together the logo (calls shape function and then adds the color and text)
 async function run(){
     try{
+        const logoInput = await promptLogo();
+        const shape = makeShape();
+        shape.setColor(logoInput.shapeColor);
+        
+        // Get the SVG code for the shape
+        const svgShape=shape.generateSVG(); 
+        const svgText = `<text x="150" y="100" fill="${userInput.textColor}" font-size="20" text-anchor="middle">${userInput.text}</text>`;
+        const svgCode = `<svg> ${svgShapeCode}${svgTextCode}</svg>`;
 
-    }
-}
+        fs.writeFileSync('logo.svg', svgCode);
+        console.log('Created logo.svg');
+    } catch(error)
+ {
+    console.error('An error occurred:', error);
+ }}
 
 // Call the function to assemble to assemble the logo
 run();
