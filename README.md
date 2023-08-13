@@ -17,7 +17,13 @@ The application gives users the ability to provide desired text, color and shape
 Repo Link: https://github.com/mayamous3/svg-logo-generator
 
 ## Test Instructions
-
+1. Open the application in terminal.
+2. Execute node index.js
+3. Respond to the prompts given!
+    Characters: ACP
+    Color Choice: Crimson
+    Shape: Circle
+    Text Color: Orchid
 ## Video Demonstration
 
 ## User Story

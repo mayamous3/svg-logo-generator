@@ -55,7 +55,7 @@ async function promptLogo() {
         {
             type: 'list',
             name: 'shapeColor',
-            message: 'Please provide color choice for the shape of the logo',
+            message: 'Please provide color choice area of the logo',
             choices: [
                 'aqua',
                 'blue',
