@@ -1,11 +1,22 @@
 # svg-logo-generator
 ## Description
+Created a node.js command-line app to take user in put and produce logos that are saved as SVG files.
+
+The application gives users the ability to provide desired text, color and shape in order to produce the logo output.
 
 ## Accomplishments
+- Created class files for each possible logo shape (circle, square, triangle)
+- Classes also have methods for updating the color of the logos.
+- Commented the code.
+- Installed Jest and Inquirer packages.
+- Updated Index.js to use packages to query the user about what elements are needed for the logo.
+- Documented Tests below.
+- Recorded functioning command line application.
 
 ### Link to Repository
+Repo Link: https://github.com/mayamous3/svg-logo-generator
 
-## Instructions
+## Test Instructions
 
 ## Video Demonstration
 
@@ -35,3 +46,6 @@ THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ```
 
 ## Author
+Amanda Cooper-Ponte (Product Owner)
+Check out my work here!
+https://mayamous3.github.io/amanda-wow-portfolio/ 
