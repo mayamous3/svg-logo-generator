@@ -1,6 +1,7 @@
 //Import packages.
 const inquirer = require('inquirer');
 const fs = require('fs');
+
 //Import classes (circle, square, triangle)
 const Triangle = require('./lib/triangle');
 const Square = require ('./lib/square');
@@ -15,7 +16,8 @@ async function promptLogo() {
         {
             type: 'input',
             name: 'letters',
-            message: 'Please provide characters for the logo'
+            message: 'Please provide characters for the logo',
+           //this piece is not working: validate: input => input.length > 0 && input.length <= 3,
         },
         {
             type: 'list',
