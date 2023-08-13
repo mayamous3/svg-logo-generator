@@ -105,7 +105,7 @@ async function run(){
         // Get the SVG code for the shape
         const svgShape=shape.render(); 
         const svgText = `<text x="150" y="100" fill="${logoInput.lettersColor}" font-size="20" text-anchor="middle">${logoInput.letters}</text>`;
-        const svgCode = `<svg width="300" height="200"> ${svgShape}${svgText}</svg>`;
+        const svgCode = `<svg width="500" height="500"> ${svgShape}${svgText}</svg>`;
 
         fs.writeFileSync('logo.svg', svgCode);
         console.log('Created logo.svg');
