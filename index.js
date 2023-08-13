@@ -19,8 +19,8 @@ async function promptLogo() {
         },
         {
             type: 'list',
-            name: 'color',
-            message: 'Please provide color choice for the logo',
+            name: 'letters-color',
+            message: 'Please provide color choice for the text of the logo',
             choices: [
                 'aqua',
                 'blue',
@@ -50,6 +50,31 @@ async function promptLogo() {
             // An array of choices for shape
             choices:['Triangle','Circle','Square']
         },
+        {
+            type: 'list',
+            name: 'shape-color',
+            message: 'Please provide color choice for the shape of the logo',
+            choices: [
+                'aqua',
+                'blue',
+                'coral',
+                'crimson',
+                'green',
+                'indigo',
+                'lavender',
+                'magenta',
+                'navy',
+                'olive',
+                'orchid',
+                'plum',
+                'purple',
+                'red',
+                'salmon',
+                'seagreen',
+                'teal',
+                'yellow'
+            ]
+        }
     ]
     )
 }
@@ -75,12 +100,12 @@ async function run(){
     try{
         const logoInput = await promptLogo();
         const shape = makeShape();
-        shape.setColor(logoInput.shapeColor);
+        shape.setColor(logoInput.shape-color);
         
         // Get the SVG code for the shape
         const svgShape=shape.generateSVG(); 
-        const svgText = `<text x="150" y="100" fill="${userInput.textColor}" font-size="20" text-anchor="middle">${userInput.text}</text>`;
-        const svgCode = `<svg> ${svgShapeCode}${svgTextCode}</svg>`;
+        const svgText = `<text x="150" y="100" fill="${logoInput.letters-color}" font-size="20" text-anchor="middle">${logoInput.letters}</text>`;
+        const svgCode = `<svg> ${svgShape}${svgText}</svg>`;
 
         fs.writeFileSync('logo.svg', svgCode);
         console.log('Created logo.svg');
