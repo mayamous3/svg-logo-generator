@@ -44,7 +44,11 @@ AND the output text "Generated logo.svg" is printed in the command line
 WHEN I open the `logo.svg` file in a browser
 THEN I am shown a 300x200 pixel image that matches the criteria I entered
 ```
+## Sources
+https://www.adobe.com/creativecloud/file-types/image/vector/svg-file.html#:~:text=From%20Chrome%20and%20Edge%20to,be%20displayed%20in%20your%20browser.
 
+I used the below site to test my SVG output, as it was not appearing in browser.
+https://www.svgviewer.dev
 ## Author
 Amanda Cooper-Ponte (Product Owner)
 Check out my work here!
