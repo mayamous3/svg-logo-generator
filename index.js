@@ -19,7 +19,7 @@ async function promptLogo() {
         },
         {
             type: 'list',
-            name: 'letters-color',
+            name: 'lettersColor',
             message: 'Please provide color choice for the text of the logo',
             choices: [
                 'aqua',
@@ -52,7 +52,7 @@ async function promptLogo() {
         },
         {
             type: 'list',
-            name: 'shape-color',
+            name: 'shapeColor',
             message: 'Please provide color choice for the shape of the logo',
             choices: [
                 'aqua',
@@ -99,13 +99,13 @@ function makeShape (shape){
 async function run(){
     try{
         const logoInput = await promptLogo();
-        const shape = makeShape();
-        shape.setColor(logoInput.shape-color);
+        const shape = makeShape(logoInput.shape);
+        shape.setColor(logoInput.shapeColor);
         
         // Get the SVG code for the shape
         const svgShape=shape.generateSVG(); 
-        const svgText = `<text x="150" y="100" fill="${logoInput.letters-color}" font-size="20" text-anchor="middle">${logoInput.letters}</text>`;
-        const svgCode = `<svg> ${svgShape}${svgText}</svg>`;
+        const svgText = `<text x="150" y="100" fill="${logoInput.lettersColor}" font-size="20" text-anchor="middle">${logoInput.letters}</text>`;
+        const svgCode = `<svg width="300" height="200"> ${svgShape}${svgText}</svg>`;
 
         fs.writeFileSync('logo.svg', svgCode);
         console.log('Created logo.svg');
